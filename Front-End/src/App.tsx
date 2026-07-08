@@ -1,11 +1,16 @@
 import Sidebar from "./components/layout/Sidebar";
-import Dashboard from "./pages/Dashboard/page";
+import Dashboard from "./pages/Principal/page";
 
 function App() {
   return (
-    <div className="flex">
+    <div className="flex min-h-screen">
+
       <Sidebar />
-      <Dashboard />
+
+      <main className="ml-72 flex-1">
+        <Dashboard />
+      </main>
+
     </div>
   );
 }
