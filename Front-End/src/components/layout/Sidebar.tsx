@@ -11,29 +11,73 @@ import {
   Leaf,
 } from "lucide-react";
 
+import { useNavigate, useLocation } from "react-router-dom";
+
 
 const menuItems = [
-  { name: "Dashboard", icon: LayoutDashboard, active: true },
-  { name: "Fazendas", icon: Tractor },
-  { name: "Culturas", icon: Wheat },
-  { name: "Estoque", icon: Warehouse },
-  { name: "Funcionários", icon: Users },
-  { name: "Financeiro", icon: DollarSign },
-  { name: "Relatórios", icon: FileText },
-  { name: "Configurações", icon: Settings },
+  { name: "Dashboard", icon: LayoutDashboard, path: "/dashboard" },
+  { name: "Fazendas", icon: Tractor, path: "/fazendas" },
+  { name: "Culturas", icon: Wheat, path: "/culturas" },
+  { name: "Estoque", icon: Warehouse, path: "/estoque" },
+  { name: "Funcionários", icon: Users, path: "/funcionarios" },
+  { name: "Financeiro", icon: DollarSign, path: "/financeiro" },
+  { name: "Relatórios", icon: FileText, path: "/relatorios" },
+  { name: "Configurações", icon: Settings, path: "/configuracoes" },
 ];
 
 
 export default function Sidebar() {
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
+
   return (
-    <aside className="fixed left-0 top-0 h-screen w-72 bg-gradient-to-b from-green-950 via-green-900 to-green-800 text-white shadow-2xl flex flex-col">
+
+    <aside className="
+      fixed
+      left-0
+      top-0
+      z-50
+
+      h-screen
+      w-72
+
+      bg-gradient-to-b
+      from-green-950
+      via-green-900
+      to-green-800
+
+      text-white
+      shadow-2xl
+
+      flex
+      flex-col
+
+      overflow-y-auto
+    ">
 
 
       {/* Logo */}
-      <div className="h-24 flex items-center px-6 border-b border-green-800">
+      <div className="
+        h-24
+        flex
+        items-center
+        px-6
+        border-b
+        border-green-800
+      ">
 
-        <div className="w-12 h-12 rounded-2xl bg-green-600 flex items-center justify-center shadow-lg">
+        <div className="
+          w-12
+          h-12
+          rounded-2xl
+          bg-green-600
+          flex
+          items-center
+          justify-center
+          shadow-lg
+        ">
           <Leaf size={28}/>
         </div>
 
@@ -55,10 +99,21 @@ export default function Sidebar() {
 
 
       {/* Menu */}
-      <nav className="flex-1 px-4 py-6">
+      <nav className="
+        flex-1
+        px-4
+        py-6
+      ">
 
 
-        <p className="text-xs uppercase tracking-widest text-green-400 mb-5 px-3">
+        <p className="
+          text-xs
+          uppercase
+          tracking-widest
+          text-green-400
+          mb-5
+          px-3
+        ">
           Menu Principal
         </p>
 
@@ -68,18 +123,36 @@ export default function Sidebar() {
 
           const Icon = item.icon;
 
+          const active = location.pathname === item.path;
+
 
           return (
 
             <button
+
               key={item.name}
+
+              onClick={() => navigate(item.path)}
+
               className={`
-                relative w-full flex items-center justify-start gap-4
-                px-4 py-3 mb-2 rounded-xl
-                transition-all duration-200
+                relative
+                w-full
+
+                flex
+                items-center
+                gap-4
+
+                px-4
+                py-3
+                mb-2
+
+                rounded-xl
+
+                transition-all
+                duration-200
 
                 ${
-                  item.active
+                  active
                   ? "bg-green-700 shadow-lg"
                   : "hover:bg-green-800"
                 }
@@ -87,31 +160,37 @@ export default function Sidebar() {
             >
 
 
-              {item.active && (
+              {active && (
+
                 <span className="
-                  absolute left-0
-                  h-8 w-1
+                  absolute
+                  left-0
+                  h-8
+                  w-1
                   bg-green-300
                   rounded-r-full
                 "/>
+
               )}
 
 
 
-              <div
-                className={`
-                  w-10 h-10
-                  rounded-xl
-                  flex items-center justify-center
-                  flex-shrink-0
+              <div className={`
+                w-10
+                h-10
 
-                  ${
-                    item.active
-                    ? "bg-green-600"
-                    : "bg-green-950"
-                  }
-                `}
-              >
+                rounded-xl
+
+                flex
+                items-center
+                justify-center
+
+                ${
+                  active
+                  ? "bg-green-600"
+                  : "bg-green-950"
+                }
+              `}>
 
                 <Icon size={20}/>
 
@@ -122,7 +201,6 @@ export default function Sidebar() {
               <span className="font-medium text-sm">
                 {item.name}
               </span>
-
 
 
             </button>
@@ -138,17 +216,32 @@ export default function Sidebar() {
 
 
       {/* Usuário */}
-      <div className="border-t border-green-800 p-5">
+      <div className="
+        border-t
+        border-green-800
+        p-5
+      ">
 
 
-        <div className="flex items-center gap-3 mb-5">
+        <div className="
+          flex
+          items-center
+          gap-3
+          mb-5
+        ">
 
 
           <div className="
-            w-11 h-11
+            w-11
+            h-11
             rounded-full
+
             bg-green-600
-            flex items-center justify-center
+
+            flex
+            items-center
+            justify-center
+
             font-bold
           ">
             VG
@@ -175,14 +268,25 @@ export default function Sidebar() {
 
 
         <button
+
+          onClick={() => navigate("/")}
+
           className="
-          w-full
-          flex items-center justify-start gap-3
-          p-3
-          rounded-xl
-          text-red-300
-          hover:bg-red-500/10
-          transition
+            w-full
+
+            flex
+            items-center
+            gap-3
+
+            p-3
+
+            rounded-xl
+
+            text-red-300
+
+            hover:bg-red-500/10
+
+            transition
           "
         >
 
@@ -201,8 +305,10 @@ export default function Sidebar() {
         <div className="
           mt-5
           pt-4
+
           border-t
           border-green-800
+
           text-center
         ">
 
@@ -224,5 +330,6 @@ export default function Sidebar() {
 
 
     </aside>
+
   );
 }

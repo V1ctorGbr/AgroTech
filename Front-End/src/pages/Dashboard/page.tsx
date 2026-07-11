@@ -7,10 +7,10 @@ import {
 } from "lucide-react";
 
 
-export default function PagePrincipal() {
+export default function Dashboard() {
 
   return (
-    <main className="min-h-screen bg-gray-50 p-8">
+    <main className="min-h-screen bg-gray-50">
 
 
       {/* Cabeçalho */}
@@ -38,13 +38,7 @@ export default function PagePrincipal() {
             </p>
 
 
-            <button className="mt-6 bg-white text-green-800 px-6 py-3 rounded-xl font-semibold flex items-center gap-2 hover:bg-green-100 transition">
 
-              Acessar Dashboard
-
-              <ArrowRight size={20}/>
-
-            </button>
 
 
           </div>

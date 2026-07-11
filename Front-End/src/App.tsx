@@ -1,18 +1,16 @@
-import Sidebar from "./components/layout/Sidebar";
-import Dashboard from "./pages/Principal/page";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes/AppRoutes";
+
 
 function App() {
+
   return (
-    <div className="flex min-h-screen">
-
-      <Sidebar />
-
-      <main className="ml-72 flex-1">
-        <Dashboard />
-      </main>
-
-    </div>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   );
+
 }
+
 
 export default App;
