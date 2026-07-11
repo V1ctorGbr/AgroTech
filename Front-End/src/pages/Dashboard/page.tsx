@@ -1,178 +1,166 @@
-import { 
-  ArrowRight,
+import {
   Leaf,
   Tractor,
   Wheat,
-  BarChart3
+  BarChart3,
 } from "lucide-react";
 
-
 export default function Dashboard() {
-
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 p-8">
 
+      <div className="max-w-7xl mx-auto">
 
-      {/* Cabeçalho */}
-      <section className="bg-gradient-to-r from-green-900 to-green-700 rounded-3xl p-10 text-white shadow-lg">
+        {/* Cabeçalho */}
+       <section className="bg-gradient-to-r from-green-900 to-green-700 rounded-2xl p-10 text-white shadow-lg">
 
-        <div className="flex justify-between items-center">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
 
-          <div>
+            <div>
 
-            <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-4">
+                <Leaf size={40} />
 
-              <Leaf size={40}/>
+                <h1 className="text-4xl font-bold">
+                  AgroSys ERP
+                </h1>
+              </div>
 
-              <h1 className="text-4xl font-bold">
-                AgroSys ERP
-              </h1>
+              <p className="text-green-100 text-lg max-w-xl">
+                Sistema completo para gerenciamento agrícola,
+                controle de produção, estoque, funcionários
+                e financeiro da propriedade.
+              </p>
 
             </div>
 
-
-            <p className="text-green-100 text-lg max-w-xl">
-              Sistema completo para gerenciamento agrícola,
-              controle de produção, estoque, funcionários
-              e financeiro da propriedade.
-            </p>
-
-
-
-
+            <Tractor
+              size={150}
+              className="opacity-30 hidden lg:block"
+            />
 
           </div>
 
+        </section>
 
-          <Tractor size={150} className="opacity-30"/>
+        {/* Recursos */}
+        <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-8">
 
+          <div className="bg-white rounded-2xl p-6 shadow-sm border hover:shadow-md transition">
 
-        </div>
+            <Wheat
+              className="text-green-700 mb-4"
+              size={40}
+            />
 
+            <h2 className="text-xl font-bold">
+              Produção Agrícola
+            </h2>
 
-      </section>
+            <p className="text-gray-500 mt-2">
+              Controle de culturas, safras e produtividade.
+            </p>
 
+          </div>
 
+          <div className="bg-white rounded-2xl p-6 shadow-sm border hover:shadow-md transition">
 
+            <Tractor
+              className="text-yellow-600 mb-4"
+              size={40}
+            />
 
-      {/* Recursos */}
-      <section className="grid grid-cols-3 gap-6 mt-8">
+            <h2 className="text-xl font-bold">
+              Gestão de Máquinas
+            </h2>
 
+            <p className="text-gray-500 mt-2">
+              Controle de equipamentos e manutenções.
+            </p>
 
-        <div className="bg-white rounded-2xl p-6 shadow-sm border">
+          </div>
 
-          <Wheat className="text-green-700 mb-4" size={40}/>
+          <div className="bg-white rounded-2xl p-6 shadow-sm border hover:shadow-md transition">
 
-          <h2 className="text-xl font-bold">
-            Produção Agrícola
+            <BarChart3
+              className="text-blue-600 mb-4"
+              size={40}
+            />
+
+            <h2 className="text-xl font-bold">
+              Relatórios
+            </h2>
+
+            <p className="text-gray-500 mt-2">
+              Análise financeira e resultados da fazenda.
+            </p>
+
+          </div>
+
+        </section>
+
+        {/* Status */}
+        <section className="mt-8 bg-white rounded-2xl shadow-sm border p-6">
+
+          <h2 className="text-xl font-bold mb-6">
+            Status do Sistema
           </h2>
 
-          <p className="text-gray-500 mt-2">
-            Controle de culturas, safras e produtividade.
-          </p>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
 
-        </div>
+            <div>
 
+              <p className="text-gray-500">
+                Fazendas
+              </p>
 
+              <p className="text-3xl font-bold text-green-700">
+                05
+              </p>
 
-        <div className="bg-white rounded-2xl p-6 shadow-sm border">
+            </div>
 
-          <Tractor className="text-yellow-600 mb-4" size={40}/>
+            <div>
 
-          <h2 className="text-xl font-bold">
-            Gestão de Máquinas
-          </h2>
+              <p className="text-gray-500">
+                Funcionários
+              </p>
 
-          <p className="text-gray-500 mt-2">
-            Controle de equipamentos e manutenções.
-          </p>
+              <p className="text-3xl font-bold text-blue-700">
+                18
+              </p>
 
-        </div>
+            </div>
 
+            <div>
 
+              <p className="text-gray-500">
+                Máquinas
+              </p>
 
+              <p className="text-3xl font-bold text-yellow-600">
+                12
+              </p>
 
-        <div className="bg-white rounded-2xl p-6 shadow-sm border">
+            </div>
 
-          <BarChart3 className="text-blue-600 mb-4" size={40}/>
+            <div>
 
-          <h2 className="text-xl font-bold">
-            Relatórios
-          </h2>
+              <p className="text-gray-500">
+                Produção
+              </p>
 
-          <p className="text-gray-500 mt-2">
-            Análise financeira e resultados da fazenda.
-          </p>
+              <p className="text-3xl font-bold text-green-700">
+                245 t
+              </p>
 
-        </div>
+            </div>
 
-
-      </section>
-
-
-
-      {/* Status */}
-      <section className="mt-8 bg-white rounded-2xl shadow-sm border p-6">
-
-        <h2 className="text-xl font-bold mb-4">
-          Status do Sistema
-        </h2>
-
-
-        <div className="grid grid-cols-4 gap-6">
-
-
-          <div>
-            <p className="text-gray-500">
-              Fazendas
-            </p>
-
-            <p className="text-3xl font-bold text-green-700">
-              05
-            </p>
           </div>
 
+        </section>
 
-
-          <div>
-            <p className="text-gray-500">
-              Funcionários
-            </p>
-
-            <p className="text-3xl font-bold text-blue-700">
-              18
-            </p>
-          </div>
-
-
-
-          <div>
-            <p className="text-gray-500">
-              Máquinas
-            </p>
-
-            <p className="text-3xl font-bold text-yellow-600">
-              12
-            </p>
-          </div>
-
-
-
-          <div>
-            <p className="text-gray-500">
-              Produção
-            </p>
-
-            <p className="text-3xl font-bold text-green-700">
-              245t
-            </p>
-          </div>
-
-
-        </div>
-
-      </section>
-
+      </div>
 
     </main>
   );
