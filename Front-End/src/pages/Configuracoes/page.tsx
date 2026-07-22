@@ -26,7 +26,7 @@ export default function Configuracoes() {
         </h1>
 
         <p className="text-gray-500 mt-1">
-          Gerencie as configurações do sistema AgroSys ERP
+          Gerencie as configurações do sistema AgroTech ERP
         </p>
 
       </div>
@@ -242,7 +242,7 @@ export default function Configuracoes() {
                 <Mail size={18}/>
 
                 <span>
-                  admin@agrosys.com
+                  admin@agrotech.com
                 </span>
 
               </div>
@@ -314,7 +314,7 @@ export default function Configuracoes() {
             </p>
 
             <p className="font-semibold mt-1">
-              AgroSys Agrícola
+              AgroTech Agrícola
             </p>
 
           </div>

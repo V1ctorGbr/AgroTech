@@ -22,7 +22,7 @@ export default function Dashboard() {
                 <Leaf size={40} />
 
                 <h1 className="text-4xl font-bold">
-                  AgroSys ERP
+                  AgroTech ERP
                 </h1>
               </div>
 

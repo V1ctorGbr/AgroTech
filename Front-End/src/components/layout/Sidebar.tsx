@@ -85,7 +85,7 @@ export default function Sidebar() {
         <div className="ml-4">
 
           <h1 className="text-2xl font-bold">
-            AgroSys
+            AgroTech
           </h1>
 
           <p className="text-green-300 text-sm">
@@ -314,7 +314,7 @@ export default function Sidebar() {
 
 
           <p className="text-xs text-green-400">
-            AgroSys ERP
+            AgroTech ERP
           </p>
 
 
