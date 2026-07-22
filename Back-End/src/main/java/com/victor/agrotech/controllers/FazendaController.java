@@ -3,6 +3,7 @@ package com.victor.agrotech.controllers;
 import com.victor.agrotech.models.Fazenda;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import com.victor.agrotech.repositories.FazendaRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
