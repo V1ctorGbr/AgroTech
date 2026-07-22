@@ -1,4 +1,4 @@
-# AgroSys ERP 🌱
+# AgroTech ERP 🌱
 
 Sistema ERP agrícola desenvolvido com **Java 21** e **Spring Boot**, voltado para o gerenciamento completo de propriedades rurais, produção agrícola, estoque, funcionários, máquinas, financeiro e relatórios.
 
@@ -6,7 +6,7 @@ Sistema ERP agrícola desenvolvido com **Java 21** e **Spring Boot**, voltado pa
 
 # 📌 Sobre o projeto
 
-O **AgroSys ERP** é um sistema desenvolvido com foco no gerenciamento agrícola moderno, permitindo controlar todas as operações de uma fazenda ou empresa agrícola em um único ambiente.
+O **AgroTech ERP** é um sistema desenvolvido com foco no gerenciamento agrícola moderno, permitindo controlar todas as operações de uma fazenda ou empresa agrícola em um único ambiente.
 
 O projeto tem como objetivo o aprendizado de desenvolvimento backend profissional, arquitetura em camadas, boas práticas de programação e construção de um sistema real para portfólio.
 
@@ -15,7 +15,6 @@ O projeto tem como objetivo o aprendizado de desenvolvimento backend profissiona
 # 🚀 Tecnologias utilizadas
 
 ## Backend
-
 - Java 21
 - Spring Boot
 - Spring Web
@@ -27,15 +26,13 @@ O projeto tem como objetivo o aprendizado de desenvolvimento backend profissiona
 - MySQL
 
 ## Frontend
-
 - React
 - Vite
+- TypeScript
 - HTML5
 - CSS3
-- JavaScript
 
 ## Ferramentas
-
 - Maven
 - Git/GitHub
 - Postman
@@ -49,7 +46,7 @@ O projeto tem como objetivo o aprendizado de desenvolvimento backend profissiona
 # 🧱 Arquitetura do projeto
 
 ```text
-AgroSys/
+AgroTech/
 │
 ├── Back-End/
 │   ├── .mvn/
@@ -58,7 +55,7 @@ AgroSys/
 │   │   │   ├── java/
 │   │   │   │   └── com/
 │   │   │   │       └── victor/
-│   │   │   │           └── agrosys/
+│   │   │   │           └── agrotech/
 │   │   │   │               ├── config/
 │   │   │   │               ├── controllers/
 │   │   │   │               ├── dto/
@@ -68,7 +65,7 @@ AgroSys/
 │   │   │   │               ├── security/
 │   │   │   │               ├── services/
 │   │   │   │               ├── utils/
-│   │   │   │               └── AgroSysApplication.java
+│   │   │   │               └── AgroTechApplication.java
 │   │   │   └── resources/
 │   │   └── test/
 │   ├── pom.xml
@@ -83,11 +80,12 @@ AgroSys/
 │   │   ├── pages/
 │   │   ├── routes/
 │   │   ├── services/
-│   │   ├── App.jsx
-│   │   └── main.jsx
+│   │   ├── App.tsx
+│   │   └── main.tsx
 │   ├── package.json
-│   └── vite.config.js
+│   └── vite.config.ts
 │
 ├── README.md
 ├── .gitignore
 └── .gitattributes
+```
